@@ -74,18 +74,34 @@
 //   const {title, director: {name, nationality}, actors: [actor1, actor2], release_year, ratings: {imdb,rotten_tomatoes}} = movie;
 
 
-  const items = [
-    { name: 'Футболка', price: 250, quantity: 2 },
-    { name: 'Джинси', price: 800, quantity: 1 },
-    { name: 'Кросівки', price: 1200, quantity: 1 }
+  // const items = [
+  //   { name: 'Футболка', price: 250, quantity: 2 },
+  //   { name: 'Джинси', price: 800, quantity: 1 },
+  //   { name: 'Кросівки', price: 1200, quantity: 1 }
+  // ];
+
+  // function calculateTotalCost (itemsArray) {
+  //   let total = 0;
+  //   for (const {price, quantity} of itemsArray) {
+  //       total += price * quantity;
+  //   }
+  //   return total;
+  // }
+  
+  // console.log(calculateTotalCost(items)); // 250 * 2 + 800 * 1 + 1200 * 1 = 2500
+
+
+
+
+  const players = [
+    { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+    { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+    { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+    { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+    { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
   ];
 
-  function calculateTotalCost (itemsArray) {
-    let total = 0;
-    for (const {price, quantity} of itemsArray) {
-        total += price * quantity;
-    }
-    return total;
-  }
-  
-  console.log(calculateTotalCost(items)); // 250 * 2 + 800 * 1 + 1200 * 1 = 2500
+
+  const playersName = players.map((player) => player.name)
+
+  const playersOnline = 
