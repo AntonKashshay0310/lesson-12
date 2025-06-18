@@ -1,27 +1,30 @@
-const openBtn = document.querySelector('#open-modal-btn')
-const backdrop = document.querySelector('#backdrop')
-const closeBtn = document.querySelector('#close-modal-btn')
+const openModal = document.getElementById("btn-open-modal");
+const backdrop = document.getElementById("backdrop");
+const closeModal = document.getElementById("modal-close-btn");
 
-openBtn.addEventListener('click', toggleModal)
-closeBtn.addEventListener('click', toggleModal)
+openModal.addEventListener("click", onOpenModal);
+closeModal.addEventListener("click", onCloseModal);
+backdrop.addEventListener("click", onBackdropClick)
 
-function toggleModal() {
-    backdrop.classList.toggle('active')
-
+function onOpenModal() {
+  window.addEventListener("keydown", onEscapePress);
+  backdrop.classList.add("active");
 }
 
-// modalForm.addEventListener('submit', (event) => {
-//     event.preventDefault()
-//     console.dir(event.currentTarget.elements.value);
-// })
+function onCloseModal() {
+      window.removeEventListener("keydown", onEscapePress);
+  backdrop.classList.remove("active");
+}
 
-// modalInput.addEventListener('focus', ()=> {
-//     console.log('focus made');
-// })
+function onEscapePress(event) {
+  console.log(event.code);
+  if (event.code === "Escape") {
+    onCloseModal();
+  }
+}
 
-// modalInput.addEventListener('blur', ()=> {
-//     console.log('blur made');
-// })
-
-// const modalForm = document.querySelector('.modal__form')
-// const modalInput= document.querySelector('js-input')
+function onBackdropClick(event) {
+    if (event.target === event.currentTarget) {
+      onCloseModal()
+    }
+}

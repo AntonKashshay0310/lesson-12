@@ -1,4 +1,4 @@
-const gallery_list = document.querySelector('#gallery__list')
+const galleryList = document.querySelector('#mountain-list')
 
 const gallery = [
     {
@@ -15,7 +15,7 @@ const gallery = [
     }
 ]
 
-const markUp = gallery_list.map(({image, title}) => `<li class="card gallery__item" style="width: 18rem;">
+const markUp = gallery.map(({image, title}) => `<li class="card gallery__item" style="width: 18rem;">
             <img src= ${image} class="card-img-top" alt=${title}>
             <div class="card-body">
                 <h5 class="card-title">${title}</h5>
@@ -24,4 +24,4 @@ const markUp = gallery_list.map(({image, title}) => `<li class="card gallery__it
             </div>
         </li>`).join('')
 
-gallery_list.insertAdjacentHTML('beforeend', markUp)
+galleryList.insertAdjacentHTML('beforeend', markUp)
