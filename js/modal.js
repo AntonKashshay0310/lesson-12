@@ -1,23 +1,27 @@
+const openBtn = document.querySelector('#open-modal-btn')
+const backdrop = document.querySelector('#backdrop')
+const closeBtn = document.querySelector('#close-modal-btn')
 
+openBtn.addEventListener('click', toggleModal)
 closeBtn.addEventListener('click', toggleModal)
 
 function toggleModal() {
     backdrop.classList.toggle('active')
 
-    // або add, але тоді не закриється, бо тогл додає якщо нема, видаляє якщо клас є
 }
 
-const btn = document.querySelector('#open-modal-btn')
-const backdrop = document.querySelector('#backdrop')
-const closeBtn = document.querySelector('#close-modal-btn') \
+// modalForm.addEventListener('submit', (event) => {
+//     event.preventDefault()
+//     console.dir(event.currentTarget.elements.value);
+// })
 
-openbtn.addEventListener('click', toggleModal)
+// modalInput.addEventListener('focus', ()=> {
+//     console.log('focus made');
+// })
 
-closeBtn-addEventListener("click", toggleModal)
-function toggleNodal() {
-backdrop classList. toggle("active")
+// modalInput.addEventListener('blur', ()=> {
+//     console.log('blur made');
+// })
 
-const form = document. queryselector(" -form")
-console. log(form);
-form. addEventListener ("submit", onFormSubmit)
-function onFormSubmit()
+// const modalForm = document.querySelector('.modal__form')
+// const modalInput= document.querySelector('js-input')

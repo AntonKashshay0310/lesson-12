@@ -2,15 +2,15 @@ const gallery_list = document.querySelector('#gallery__list')
 
 const gallery = [
     {
-        image:'',
+        image:'../img/mountain-9631829_1280.jpg',
         title:'',
     },
     {
-        image:'',
+        image:'../img/mountains-9473304_1280.jpg',
         title:'',
     },
     {
-        image:'',
+        image:'../img/mountains-9580848_1280.jpg',
         title:'',
     }
 ]
